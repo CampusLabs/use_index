@@ -14,4 +14,8 @@ Gem::Specification.new do |gem|
   gem.name          = "use_index"
   gem.require_paths = ["lib"]
   gem.version       = UseIndex::VERSION
+
+  gem.add_dependency 'activerecord', '>= 3.1'
+
+  gem.add_development_dependency 'rake'
 end
