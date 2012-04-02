@@ -1,6 +1,8 @@
 # UseIndex
 
-TODO: Write a gem description
+This is a very simple ActiveRecord extension to let you force usage of a particular index for cases where MySQL refuses to use the best available one.  Let's face it, sometimes MySQL is dumb.
+
+However, you should probably have a very good reason for wanting to use a different index than MySQL is choosing for you.  If you haven't already debugged and profiled your query, this gem is probably not for you.
 
 ## Installation
 
@@ -18,7 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Chain `use_index` along with other ActiveRecord methods.  For example:
+
+```ruby
+Event.where(:event_type => "date").use_index("some_crazy_index_you_want_to_use")
+```
 
 ## Contributing
 
