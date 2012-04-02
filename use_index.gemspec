@@ -4,8 +4,8 @@ require File.expand_path('../lib/use_index/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Cody Russell"]
   gem.email         = ["bratsche@gnome.org"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{ActiveRecord extension to support MySQL's 'USE INDEX'}
+  gem.summary       = %q{ActiveRecord extension to support MySQL's 'USE INDEX'}
   gem.homepage      = ""
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }

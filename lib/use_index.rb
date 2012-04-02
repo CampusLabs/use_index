@@ -1,5 +1,6 @@
+require "use_index/active_record_module_extension"
 require "use_index/version"
 
-module UseIndex
-  # Your code goes here...
+ActiveSupport.on_load(:active_record) do
+  include UseIndex::ActiveRecordModelExtension
 end
